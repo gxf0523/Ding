@@ -1,0 +1,17 @@
+.DingWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #f5f5f5;
+}
+.DingCenter{
+    display: flex;
+    flex:1;
+}
+.DingFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    background: #fff;
+}

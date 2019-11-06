@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Route, Switch, NavLink, Redirect } from "react-router-dom";
 import AsyncComponent from "../common/js/AsyncComponent";
-import styles from '../common/css/index.css'
+require('../common/css/index.css');
+
 
 /*页面*/
 const Message = AsyncComponent(() => import("../view/Message")); //消息
@@ -12,8 +13,8 @@ const My = AsyncComponent(() => import("../view/My")); //我的
 class RoutesIndex extends Component {
     render() {
         return (
-            <div className={styles.DingWrapper}>
-                <div className={styles.DingCenter}>
+            <div className="DingWrapper">
+                <div className="DingCenter">
                     <Switch>
                         <Route exact path="/message" component={Message} />
                         <Route path="/work" component={Work} />
@@ -22,7 +23,7 @@ class RoutesIndex extends Component {
                         <Redirect to="/message" />
                     </Switch>
                 </div>
-                <div className={styles.DingFooter}>
+                <div className="DingFooter">
                     <NavLink to="/message">消息</NavLink>
                     <NavLink to="/work">工作</NavLink>
                     <NavLink to="/addressbook">通讯录</NavLink>
